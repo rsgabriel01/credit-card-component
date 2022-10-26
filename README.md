@@ -18,7 +18,7 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
 <br>
 
 <p align="center">
-  <img alt="grspay" src=".github/projectNew.png" width="100%">
+  <img alt="grspay" src=".github/projectImage.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
