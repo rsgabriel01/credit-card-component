@@ -107,6 +107,13 @@ const cardsDynamicMasks = {
 }
 const cardNumberMasked = IMask(cardNumberInput, cardsDynamicMasks)
 
+function clearFields() {
+  cardNumberMasked.value = ""
+  expirationDateMasked.value = ""
+  securityCodeMasked.value = ""
+  cardHolder.value = ""
+  ccHolder.innerText = "FULANO DA SILVA"
+}
 document.querySelector("form").addEventListener("submit", event => {
   event.preventDefault()
 })
@@ -114,12 +121,13 @@ document.querySelector("form").addEventListener("submit", event => {
 const addButton = document.querySelector("#add-card")
 addButton.addEventListener("click", () => {
   alert("Cartão adicionado!")
+  clearFields()
 })
+
+const ccHolder = document.querySelector(".cc-holder .value")
 
 const cardHolder = document.querySelector("#card-holder")
 cardHolder.addEventListener("input", () => {
-  const ccHolder = document.querySelector(".cc-holder .value")
-
   ccHolder.innerText =
     cardHolder.value.length === 0 ? "FULANO DA SILVA" : cardHolder.value
 })
